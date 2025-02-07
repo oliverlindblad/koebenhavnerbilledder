@@ -1,15 +1,236 @@
 ---
+import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Form from "../components/Form.astro";
+import Footer from "../components/Footer.astro";
+import Anmeldelse from "../components/Anmeldelse.astro";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+	<header>
+	<Header></Header>
+	</header>
+
+	<main>
+<section class="grid md:grid-cols-2 items-center p-10">
+	<div class="overflow-hidden rounded-md">
+    <img src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="billede" class="w-full h-auto hover:scale-130 duration-300 ease-in-out">
+		</div>
+    <div class="p-10">
+        <h1 class="font-mono text-2xl text-green-950">  
+            Københavnerbilleder - en guide til hipster foto af Sten Simons  
+        </h1>
+
+        <h1 class="font-mono text-xl mt-10 text-green-950">Hent et prøvekapitel</h1>
+
+        <form class="font-mono mt-4 max-w-md text-green-950">
+            <!-- E-mail -->
+    
+            <input type="email" id="email" name="email" placeholder="Indtast din e-mail" required  
+                class="w-full p-2 border border-gray-300 rounded-md text-black">
+				 <input class="rounded-md" type="checkbox" id="prøvekapitlet" name="prøvekapitlet" value="prøvekapitlet">
+            <label class="text-xs font-mono text-green-950" for="checkbox">* Jeg accepterer at modtage prøvekapitlet og modtage markedsføring om bogen ved at downloade prøvekapitlet.</label>
+				
+				
+
+            <!-- Knap -->
+            <button type="submit"  
+                class="w-full bg-green-950 text-white p-3 rounded-md mt-4 hover:bg-green-800 transition">
+                Hent prøvekapitel
+            </button>
+        </form>
+    </div>
+</section>
+	<section class="data-facts grid grid-cols-4 gap-4 p-7">
+		<div class="col-start-2 col-end-2">
+			<h3 class="font-mono text-xl pb-11 text-green-950">Københavnerbilleder - en guide til hipster foto</h3>
+			<p class="font-mono text-sm pb-3">
+Forfatter: Sten Simons </p>
+	<p class="font-mono text-sm pb-3">
+Antal sider: 344 </p>
+<p class="font-mono text-sm pb-3">
+Forlag: Mellem Linjerne </p>
+<p class="font-mono text-sm pb-6">
+ISBN: 987-6-987654-32-1
+</p>
+<p class="font-mono text-green-950">Pris: 399.-</p>
+		</div>
+		<div>
+			<h3 class="font-mono text-xl pb-3 text-green-950">Københavnerbilleder er de danske streetfotografers bibel:</h3>
+			<p class="font-mono text-sm/6 line-"> Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. <br>Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+		</div>
+	</section>
+	<section class="fotos-bog grid grid-cols-3 gap-4 p-7 pl-20 pr-20">
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/kobenhavnerbilleder_oppefra.jpg" alt="">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/kobenhavnerbilleder_aaben_venstre.jpg" alt="">
+		</div>
+	</section>
+	<section class="uddrag-kapitel grid grid-cols-2 gap-4 p-7 pl-20 pr-20">
+		<div class="col-1 font-mono text-2xl text-green-950">
+			<h3>Kapitler</h3>
+		</div>
+		<div class="col-start-1">
+			<h3 class="font-mono text-base text-green-950">Kapitel 1 - </h3>
+			<div class="font-mono text-sm pb-4 pr-25">
+			<p>Intro til street foto
+Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950">Kapitel 2 - </h3>
+<div class="font-mono text-sm pb-4 pr-25">
+<p>Om at skyde street
+Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950">Kapitel 3 - </h3>
+<div class="font-mono text-sm pb-4 pr-25">
+<p>Om at finde det rette motiv
+Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950">Kapitel 4 - </h3>
+<div class="font-mono text-sm pr-25">
+<p>Digital street foto
+De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. 
+</p>
+</div>
+		</div>
+		<div class="col-start-2">
+			<h3 class="font-mono text-base text-green-950 pl-25">Kapitel 5 - </h3>
+			<div class="font-mono text-sm pb-4  pl-25">
+			<p>Analog street foto
+Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto. 
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950 pl-25">Kapitel 6 - </h3>
+<div class="font-mono text-sm pb-4 pl-25">
+<p>Om at skyde sort/hvid
+Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. 
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950 pl-25">Kapitel 7 - </h3>
+<div class="font-mono text-sm pb-4 pl-25">
+<p>Kreative teknikker 
+Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!
+</p>
+</div>
+<h3 class="font-mono text-base text-green-950 pl-25">Kapitel 8 - </h3>
+<div class="font-mono text-sm pb-4 pl-25">
+<p>Kom helt tæt på!
+Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…
+</p>
+</div>
+		</div>
+	</section>
+
+
+
+	
+
+	<section class="mt-10 p-20">
+		<h2 class="text-2xl font-mono mb-1 pb-6">Anmeldelser af bogen</h2>
+		<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-5 font-mono">
+			<Anmeldelse titel="Godt!" stjerner="5" forfatter="Hanne Hovgaard, Berlingeren " anmeldelseid="a1">
+				Københavnerbilleder er en grundig introduktion til at skyde billeder med retrokant. Hvad enten du er har arbejdet med foto siden 135 filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.
+
+			</Anmeldelse>
+			<Anmeldelse titel="Billeder der Taler" stjerner="4" forfatter="Kim Kloggaard, Fotojournalen.dk" anmeldelseid="a2">
+				Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?
+				Den fanger øjeblikke, vækker minder til live og fortæller en historie uden ord. En god fotobog er ikke bare en samling billeder, men en rejse gennem tid og følelser.</Anmeldelse>
+			<Anmeldelse titel="Visuel Oplevelse" stjerner="6" forfatter="Volmer Hansen, Lukkertiden.dk " anmeldelseid="a3">
+				Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - <br> her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.<br>” Tillykke - godt arbejde.
+			</Anmeldelse>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+	<section class="galleri grid grid-cols-4 gap-4 p-7 pl-20 pr-20">
+		<div class="col-span-2 pt-5 font-mono text-2xl text-green-950">
+			<h3>Billeder fra bogen</h3>
+		</div>
+		<div class="col-start-1 overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-14.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="billede">
+		</div>
+			<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-17.jpg" alt="billede">
+		</div>
+		<div class="overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="billede">
+		</div>
+	</section>
+	<section class="forfatteren grid grid-cols-4 gap-10 p-7">
+		<div class="col-start-2 font-mono text-2xl text-green-950">
+			<h3>Forfatteren</h3>
+		</div>
+		<div class="col-start-2 overflow-hidden rounded-md">
+			<img class="hover:scale-130 duration-300 ease-in-out" src="/public/sten_simons.jpg" alt="">
+		</div>
+		<div class="content-center">
+		<p class="pb-4 font-mono text-sm/6">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+		</p>
+		<p class="font-mono text-sm/6">Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+		</p>
+		</div>
+	</section>
+	<section class="formular flex justify-center p-7">
+		<div>
+			<h3 class="font-mono text-2xl text-green-950">Køb Københavnerbilleder nu!</h3>
+			<Form></Form>
+			<div class="pl-4">
+			 <button type="submit"  
+                class="w-1/2 bg-green-950 font-mono text-white p-3 rounded-md mt-4 hover:bg-green-800 transition">
+                Køb bogen
+            </button>
+			</div>
+		</div>
+	</section>
+	</main>
+	<footer>
+		
+	<Footer></Footer>
+	</footer>
+	
 </MainLayout>

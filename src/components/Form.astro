@@ -1,0 +1,58 @@
+---
+import Button from '../components/Button.astro';
+---
+
+<form method="post" class="p-4 font-mono">
+        <div class="grid grid-cols-2 gap-4 pt-4">
+            <div>
+            <label for="antal" class="block">Antal:</label>
+            <input class="rounded-md" type="number" id="antal" placeholder="0">
+            </div>
+            <div>
+            <label for="levering" class="block pb-2">Levering:</label>
+            <input class="rounded-md" type="radio" id="postnord" name="levering">
+            <label for="postnord" checked="checked">PostNord</label>
+            <input class="rounded-md" type="radio" id="afhent" name="levering">
+            <label for="afhent">Afhent selv</label>
+</div>
+        </div>
+        <div class="grid grid-cols-2 pt-4">
+            <div>
+            <label for="fname" class="block">Navn:</label>
+            <input class="rounded-md" type="text" id="fname" name="fname" value="" placeholder="Oliver">
+            </div>
+            <div>
+               <label for="fname" class="block">Efternavn:</label>
+            <input class="rounded-md" type="text" id="lname" name="lname" value="" placeholder="Larsen">
+            </div>
+        </div>
+        <div class="grid grid-cols-2 pt-4">
+            <div>
+            <label for="adresse" class="block">Adresse:</label>
+            <input class="rounded-md" type="text" id="adresse" name="adresse" value="" placeholder="Vesterbrogade 2A">
+            </div>
+            <div>
+            <label for="postnummer" class="block">Postnummer:</label>
+            <input class="rounded-md" type="text" id="postnummer" name="postnord" value="" placeholder="2300">
+            </div>
+        </div>
+        <div class="grid grid-cols-2 pt-4">
+            <div>
+            <label for="e-mail" class="block">E-mail:</label>
+            <input class="rounded-md" type="text" id="e-mail" name="e-mail" value="" placeholder="marcus.bert@hotmail.com">
+            </div>
+            <div>
+            <label for="telefon" class="block">Telefon:</label>
+            <input class="rounded-md" type="text" id="telefon" name="telefon" value="" placeholder="22 33 92 40">
+            </div>
+        </div>
+    
+
+        <div class="pt-4">
+            <input class="rounded-md" type="checkbox" id="nyhedsbrev" name="nyhedsbrev" value="nyhedsbrev">
+            <label for="checkbox">Ja tak til nyhedsbrev og tilbud</label>
+        </div>
+       
+    </form>
+
+   
